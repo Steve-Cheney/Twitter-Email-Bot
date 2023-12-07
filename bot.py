@@ -1,6 +1,8 @@
 import tweepy
+import os
 import os.path
 import time
+import json
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -13,7 +15,12 @@ GOOGLE_CREDS= 'credentials.json'
 
 
 # Twitter API credentials
-# todo: Fix with secrets
+
+# Access values from environment variables
+consumer_key = os.environ.get("CONSUMER_KEY")
+consumer_secret = os.environ.get("CONSUMER_SECRET")
+access_token = os.environ.get("ACCESS_TOKEN")
+access_token_secret = os.environ.get("ACCESS_TOKEN_SECRET")
 
 
 # Gmail API credentials
